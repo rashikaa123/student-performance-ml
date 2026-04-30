@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Predictor</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus {
+            transform: scale(1.05);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #ffffff;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #f1f1f1;
+            transform: scale(1.1);
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .pass {
+            color: #00ffcc;
+        }
+
+        .fail {
+            color: #ff4d4d;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="card">
+    <h2>🎓 Student Performance Predictor</h2>
+
+    <form action="/predict" method="post">
+        <input type="text" name="study" placeholder="📚 Study Time">
+        <input type="text" name="attendance" placeholder="📊 Attendance %">
+        <input type="text" name="score" placeholder="📝 Total Score">
+
+        <button type="submit">🚀 Predict</button>
+    </form>
+
+    {% if prediction_text %}
+        <div class="result {% if 'Pass' in prediction_text %}pass{% else %}fail{% endif %}">
+            {{ prediction_text }}
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>`
