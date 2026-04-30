@@ -1,77 +1,78 @@
-<<<<<<< HEAD
-# Student Performance Prediction (ML + Flask)
-This project is a simple machine learning application that predicts whether a student will pass or fail.
+# 🎓 Student Performance Predictor
 
-The idea behind this project is to use basic student-related data like study time, attendance, and total score to understand how these factors affect performance.
+This project is a simple and interactive Machine Learning web app that predicts whether a student will **Pass or Fail** based on their study habits and performance.
 
-## Features
-- Predicts Pass/Fail using Machine Learning
-- Built using Logistic Regression
-- Simple and clean web interface using Flask
-- Uses real dataset
+It is designed to be easy to understand, visually appealing, and practical for real-world use.
 
-## How it Works
-1. The dataset is loaded and cleaned
-2. Grades (A–F) are converted into Pass/Fail
-3. The model is trained using student data
-4. User enters values in the web page
-5. The model predicts the result instantly
+---
 
-## Input Features
-- Study Time
-- Attendance Percentage
-- Total Score
+##  About the Project
 
-## Output
-- Pass or Fail prediction
+The idea behind this project is to analyze student-related factors like:
 
-## Technologies Used
-- Python
-- Flask
-- Pandas
-- Scikit-learn
-- HTML & CSS
+* 📚 Study hours
+* 📅 Attendance percentage
+* 📝 Total score
 
-## Future Improvements
-- Use larger datasets
-- Improve model accuracy
-- Deploy as a live web app
-=======
-# Student Performance Prediction (ML + Flask)
-This project is a simple machine learning application that predicts whether a student will pass or fail.
+Using these inputs, the model predicts whether a student is likely to pass or needs improvement.
 
-The idea behind this project is to use basic student-related data like study time, attendance, and total score to understand how these factors affect performance.
+---
 
-## Features
-- Predicts Pass/Fail using Machine Learning
-- Built using Logistic Regression
-- Simple and clean web interface using Flask
-- Uses real dataset
+##  Features
 
-## How it Works
-1. The dataset is loaded and cleaned
-2. Grades (A–F) are converted into Pass/Fail
-3. The model is trained using student data
-4. User enters values in the web page
-5. The model predicts the result instantly
+*  Predicts Pass/Fail using Machine Learning
+*  Personalized result using student name
+*  Clean and interactive UI
+*  Attractive background and modern design
+*  Gives feedback and improvement tips
+*  Fun animations for better user experience
 
-## Input Features
-- Study Time
-- Attendance Percentage
-- Total Score
+---
 
-## Output
-- Pass or Fail prediction
+##  Machine Learning Model
 
-## Technologies Used
-- Python
-- Flask
-- Pandas
-- Scikit-learn
-- HTML & CSS
+* Algorithm used: **Logistic Regression**
+* Type: **Classification Model**
+* Output:
 
-## Future Improvements
-- Use larger datasets
-- Improve model accuracy
-- Deploy as a live web app
->>>>>>> 64d6d027e574b2dc91856c361ba3be4f3a0d32e2
+  * ✅ Pass
+  * ❌ Fail
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Streamlit
+* Pandas
+* Scikit-learn
+
+---
+
+##  Project Structure
+
+```
+student-performance-ml/
+│── app_streamlit.py
+│── student_performance.csv
+│── bg.jpg
+│── requirements.txt
+│── README.md
+```
+
+---
+
+##  Future Improvements
+
+* Add grade prediction (A/B/C/D/F)
+* Show accuracy and graphs
+* Improve model with more features
+* Add login system
+
+---
+##  Conclusion
+
+This project helped in understanding how Machine Learning models can be integrated with a user-friendly interface to create real-world applications.
+
+---
+---
