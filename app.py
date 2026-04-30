@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
+import streamlit as st
 
-app = Flask(__name__)
-
-# Load dataset safely
 try:
     data = pd.read_csv("student_performance.csv")
 except:
